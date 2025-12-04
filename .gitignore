@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual env
+.env
+.env.*
+.envrc
+venv/
+.venv/
+env/
+ENV/
+
+
+# IDE
+.idea/
+.vscode/
+
+# Build / Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+MANIFEST
+
+# PyTest / Coverage
+.pytest_cache/
+.cache/
+.coverage
+.coverage.*
+htmlcov/
+cover/
+coverage.xml
+
+# Allure
+allure-results/
+allure-report/
+allure-history/
+
+# Test artifacts (screenshots, videos, attachments)
+screenshots/
+videos/
+artifacts/
+output/
+*.png
+*.jpg
+*.jpeg
+*.mp4
+
+# Logs
+*.log
+selenium-*.log
+chromedriver.log
+geckodriver.log
+
+# Static analysis / linters
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Misc
+*.tmp
+.DS_Store
