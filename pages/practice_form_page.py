@@ -26,10 +26,12 @@ class PracticeFormPage:
     modal_rows = ss('.modal-content tbody tr')
     close_modal = s('#closeLargeModal')
 
-    def gender_label(self, text: str):
+    @staticmethod
+    def gender_label(text: str):
         return s(f'//label[text()="{text}"]')
 
-    def hobby_label(self, text: str):
+    @staticmethod
+    def hobby_label(text: str):
         return s(f'//label[text()="{text}"]')
 
     def open(self):
@@ -97,8 +99,8 @@ class PracticeFormPage:
         return self
 
     def should_have_row(self, label: str, *texts: str):
-        cell = self.modal_rows.element_by_its('td:first-child', have.exact_text(label)) \
-            .element('td:nth-child(2)')
+        row = self.modal_rows.element_by(have.text(label))
+        cell = row.element('td:nth-child(2)')
         for t in texts:
             cell.should(have.text(t))
         return self
